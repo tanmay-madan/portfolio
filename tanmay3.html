@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f0ff;
+      color: #2c2c2c;
+    }
+
+    header {
+      background: linear-gradient(120deg, #7f5af0, #a78bfa);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    #typed-text {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-top: 15px;
+      height: 1.4em;
+    }
+
+    .cta-button {
+      background: white;
+      color: #7f5af0;
+      border: 2px solid white;
+      padding: 12px 24px;
+      margin-top: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #7f5af0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #d1c4e9;
+      padding-bottom: 5px;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #a78bfa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #ede7f6;
+      border-left: 5px solid #7f5af0;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(127, 90, 240, 0.15);
+    }
+
+    .skills span {
+      background: #d1c4e9;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 1rem;
+      margin: 6px;
+      display: inline-block;
+      color: #4527a0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #c1b3f3;
+      border-radius: 6px;
+      background-color: #f3efff;
+    }
+
+    form button {
+      background: #7f5af0;
+      color: white;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #6a47db;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #7f5af0;
+      color: white;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #7f5af0dd;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      nav a { margin: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Tanmay Madan</h1>
+    <div id="typed-text"></div>
+    <a href="#projects"><button class="cta-button">View My Work ↓</button></a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="tanmay.jpeg" alt="Profile Photo">
+      
+    <p>I am a young enthusiastic boy who loves exploring new things. I have a huge interest in sports and have been playing lawn tennis for the past 13 years and have consistently participated in AITA tournaments held across India. I have been actively participating in MUNs since a young age, which has fueled my curiosity in politics and international affairs. Additionally, I have a strong interest in the domains of computer science, especially networking and computing terminologies. I aim to combine my diverse interests and experiences to contribute meaningfully to the world.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Personal Portfolio</h3>
+        <p>A sleek, responsive site to showcase skills and projects. Built with pure HTML, CSS, and a touch of JS.</p>
+        
+      </div>
+      <div class="project-card">
+        <h3>Directory System</h3>
+        <p>Developed a directory system using data structures like linked lists, hash tables, and binary search trees to efficiently manage records.</p>
+    
+      </div>
+
+      <div class="project-card">
+        <h3>Number System Conversion Application</h3>
+        <p>Developed a number system conversion app using basics of c such as functions,arrays,etc. in which we can convert a number from one number system to another</p>
+    
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Figma</span>
+    <span>Git</span>
+    <span>Data Structures</span>
+    <span>Cybersecurity</span>
+    <span>Graphic Design</span>
+  </div>
+</section>
+
+
+  <section id="experience">
+  <h2>Experience</h2>
+
+  <div class="project-card">
+    <h3>Web Development Intern — XYZ Solutions</h3>
+    <p>Contributed to UI redesign using React and CSS animations. Improved page performance and mobile responsiveness. Worked with Git version control and REST APIs.</p>
+    <small>Jan 2025 – Mar 2025</small>
+  </div>
+
+  <div class="project-card" style="margin-top: 20px;">
+    <h3>Course: Data Structures</h3>
+    <p>Completed a structured course on Data Structures from <strong>The Institute of Advanced Networking and Technology</strong>. Covered linked lists, trees, hash tables, and sorting/searching algorithms.</p>
+    <small>Completed in 2024</small>
+  </div>
+
+  <div class="project-card" style="margin-top: 20px;">
+    <h3>Course: Python for Beginners (Hands-On) — IBM</h3>
+    <p>Completed a hands-on Python programming course by <strong>IBM</strong>, focusing on basics of syntax, functions, data types, and automation scripts. Built multiple mini-projects as part of the coursework.</p>
+    <small>Completed in 2024</small>
+  </div>
+
+  <div class="project-card" style="margin-top: 20px;">
+  <h3>Tech Conferences & Seminars</h3>
+  <p>Attended multiple conferences and seminars on advanced topics in computer science, including the "Advanced Quantum Computing and Machine Learning Workshop" held at South Asian University on 28–29 March 2025.</p>
+  <small>2024 – 2025</small>
+</div>
+
+
+  <div class="project-card" style="margin-top: 20px;">
+  <h3>Model United Nations (MUN) Delegate</h3>
+  <p>Actively participated in various Model United Nations conferences at both national and international levels. Honed skills in diplomacy, public speaking, negotiation, and international relations.</p>
+  <small>2016 – Present</small>
+</div>
+
+</section>
+
+
+</section>
+
+
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:yourfriend@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="👤 Your Name" required>
+      <input type="email" name="email" placeholder="📧 Your Email" required>
+      <textarea name="message" rows="5" placeholder="💬 Your Message" required></textarea>
+      <button type="submit">Send ✉️</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Tanmay Madan
+  </footer>
+
+  <script>
+    const phrases = [
+      "Frontend Developer.",
+      "UI/UX Designer.",
+      "Creative Thinker.",
+      "Problem Solver.",
+    ];
+    let i = 0;
+    let j = 0;
+    let currentPhrase = [];
+    let isDeleting = false;
+    let isEnd = false;
+
+    function loop() {
+      const typedText = document.getElementById('typed-text');
+      typedText.innerHTML = currentPhrase.join('');
+
+      if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+          currentPhrase.push(phrases[i][j]);
+          j++;
+          typedText.innerHTML = currentPhrase.join('');
+        }
+
+        if (isDeleting && j <= phrases[i].length) {
+          currentPhrase.pop();
+          j--;
+          typedText.innerHTML = currentPhrase.join('');
+        }
+
+        if (j == phrases[i].length) {
+          isEnd = true;
+          isDeleting = true;
+          setTimeout(loop, 1200);
+          return;
+        }
+
+        if (isDeleting && j === 0) {
+          currentPhrase = [];
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) {
+            i = 0;
+          }
+        }
+      }
+      const speedUp = Math.random() * (80 - 50) + 50;
+      const normalSpeed = Math.random() * (150 - 100) + 100;
+      const time = isDeleting ? speedUp : normalSpeed;
+      setTimeout(loop, time);
+    }
+
+    loop();
+  </script>
+
+</body>
+</html>
